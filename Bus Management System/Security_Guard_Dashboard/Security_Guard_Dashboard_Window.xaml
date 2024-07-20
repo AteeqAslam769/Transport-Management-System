@@ -1,0 +1,25 @@
+﻿<Window x:Class="Transport_Management_System.Security_Guard_Dashboard.Security_Guard_Dashboard_Window"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+         ResizeMode="NoResize"
+         Title="Security Guard Dashboard" Height="450" Width="800"
+         Background="#F0F0F0"  
+        >
+    <Window.Icon>
+        <BitmapImage UriSource="C:\Users\Ateeq\Desktop\EAD\Final Project\Bus_logo.ico"/>
+    </Window.Icon>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" VerticalAlignment="Top" Background="black" Height="35">
+            <MenuItem FontSize="14" FontWeight="Bold" FontFamily="Arial" Padding="20,0,0,0" Width="120" Height="35" Foreground="white" BorderBrush="White" BorderThickness="0,0,2,0" Header="Home Page" Click="homeButtonClicked"></MenuItem>
+            <MenuItem FontSize="14" FontWeight="Bold" FontFamily="Arial" Padding="20,0,0,0" Width="230" Height="35" Foreground="white" BorderBrush="White" BorderThickness="0,0,2,0" Header=" Registered Vehicles Entries" Click="MenuItem_Click"></MenuItem>
+            <MenuItem FontSize="14" FontWeight="Bold" FontFamily="Arial" Padding="25,0,0,0" Width="230" Height="35" Foreground="white" BorderBrush="White" BorderThickness="0,0,2,0" Header="Unregistered Vehicle Entries" Click="MenuItem_Click_1"></MenuItem>
+            <MenuItem FontSize="14" FontWeight="Bold" FontFamily="Arial" Padding="25,0,0,0" Width="100" Height="35" Foreground="white" BorderBrush="White" BorderThickness="0,0,2,0" Header="Logout" Click="Logout_Window"></MenuItem>
+        </Menu>
+        <Frame x:Name="SecurityGuardMainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>

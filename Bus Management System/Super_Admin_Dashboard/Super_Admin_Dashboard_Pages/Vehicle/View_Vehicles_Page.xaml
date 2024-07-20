@@ -1,0 +1,57 @@
+﻿<Page x:Class="Transport_Management_System.Super_Admin_Dashboard.Super_Admin_Dashboard_Pages.View_Vehicle_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Transport_Management_System.Super_Admin_Dashboard.Super_Admin_Dashboard_Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="View_Users_Page"
+      Background="#f2f2f2">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition>
+
+                </ColumnDefinition>
+                <ColumnDefinition>
+
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid  Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition>
+
+                    </ColumnDefinition>
+                    <ColumnDefinition>
+
+                    </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Height="20" Width="60" HorizontalAlignment="Left" Margin="20"  Click="Vehicle_Search">Search</Button>
+                <TextBox Grid.Column="0" x:Name="VehicleTextBox"  VerticalContentAlignment="Center" Margin="0,10,0,10" Height="30" HorizontalAlignment="Left" Width="230" Text="Enter Vehicle Registration Number" Foreground="Gray" FontSize="11"/>
+            </Grid>
+            <Label Grid.Row="0" x:Name="VehicleLabel" Content="Vehicles" FontSize="30" FontWeight="Bold" VerticalContentAlignment="Top" Margin="0,0,0,10"/>
+        </Grid>
+        <DataGrid Grid.Row="1" Margin="0,0,10,0" AutoGenerateColumns="False" x:Name="VehicleGrid" ItemsSource="{Binding Vehicles}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Vehicle Registration Number" Binding="{Binding Vehicle_Id}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Vehicle Type" Binding="{Binding Vehicle_Type}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Location Status" Binding="{Binding Status}" Width="*" IsReadOnly="True"/>
+
+                <!-- Add more DataGridTextColumn for other properties as needed -->
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="93*"/>
+                <ColumnDefinition Width="288*"/>
+                <ColumnDefinition Width="380*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+</Page>

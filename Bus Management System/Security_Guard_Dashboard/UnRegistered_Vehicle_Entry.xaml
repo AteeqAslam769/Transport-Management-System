@@ -1,0 +1,55 @@
+﻿<Page x:Class="Transport_Management_System.Security_Guard_Dashboard.UnRegistered_Vehicle_Entry"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UnRegistered_Vehicle_Entry"
+      Background="#F0F0F0">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="RegTextBox" Grid.Column="0" Height="30" Width="250" Foreground="Gray" Text="Enter Registration Number" Padding="4,4,0,0" FontSize="14" GotFocus="RegTextBox_GotFocus" LostFocus="RegTextBoxLoseFocus" HorizontalAlignment="Right" Margin="0,0,20,0"></TextBox>
+                <TextBox x:Name="TypeTextBox" Grid.Column="1" Height="30" Width="250" Foreground="Gray" Text="Enter Vehicle Type" Padding="4,4,0,0" FontSize="14" GotFocus="TypeTextBox_GotFocus" LostFocus="TypeTextBoxLoseFocus" HorizontalAlignment="Left" Margin="20,0,0,0"></TextBox>
+
+
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Height="30" Width="100" Content="Entered" FontSize ="18" Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right" Click="Entered_Button_Click"></Button>
+                <Button Grid.Column="1" Height="30" Width="100" Content="Exited" FontSize ="18" Margin="20,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Click="Exited_Button_Click"></Button>
+            </Grid>
+        </Grid>
+        <DataGrid Grid.Row="1" x:Name="VehicleMovmentGrid" Margin="20,20,20,0" Height="150" AutoGenerateColumns="False" IsReadOnly="True" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn  Binding="{Binding MovementId}" Width="120" Header="Vehicle Movment Id"></DataGridTextColumn>
+                <DataGridTextColumn  Binding="{Binding VehicleRegistrationNumber}" Width="170" Header="Vehicle Registration Number"></DataGridTextColumn>
+                <DataGridTextColumn  Binding="{Binding VehicleType}" Width="80" Header="Vehicle Type"></DataGridTextColumn>
+                <DataGridTextColumn  Binding="{Binding MovementStatus}" Width="110" Header="Movement Status"></DataGridTextColumn>
+                <DataGridTextColumn  Binding="{Binding VehicleStatus}" Width="90" Header="Vehicle Status"></DataGridTextColumn>
+                <DataGridTextColumn  Binding="{Binding Date}" Width="*" Header="Date"></DataGridTextColumn>
+                <DataGridTextColumn  Binding="{Binding Time}" Width="*" Header="Time"></DataGridTextColumn>
+                <DataGridTextColumn  Binding="{Binding Day}" Width="*" Header="Day"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>

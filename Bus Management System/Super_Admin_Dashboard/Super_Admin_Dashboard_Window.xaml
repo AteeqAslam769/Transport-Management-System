@@ -1,0 +1,65 @@
+﻿<Window x:Class="Transport_Management_System.Super_Admin_Dashboard_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Super Admin Dashboard" Height="450" Width="800"
+        Background="#f2f2f2"
+        ResizeMode="NoResize">
+    <Window.Icon>
+        <BitmapImage UriSource="C:\Users\Ateeq\Desktop\EAD\Final Project\Bus_logo.ico"/>
+    </Window.Icon>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="1" Height="390" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+
+        <!-- Navigation Bar -->
+        <Menu VerticalAlignment="Top" Background="black" Height="40" Grid.Row="0" Panel.ZIndex="1" Foreground="white">
+            <!-- Home Page -->
+            <MenuItem Header="Home Page" BorderThickness="0,0,2,0" BorderBrush="white" FontWeight="Bold" Width="100" Height="40" Click="Home_Page">
+            </MenuItem>
+
+            <!-- Manage Users -->
+            <MenuItem Header="Manage Users" BorderThickness="0,0,2,0" BorderBrush="white" FontWeight="Bold" Width="120"  VerticalAlignment="Center" Height="40">
+                <!-- Submenu Items -->
+                <MenuItem Header="View Users" Foreground="#333" Click="View_User"/>
+                <MenuItem Header="Add User" Foreground="#333" Click="Add_User"/>
+                <MenuItem Header="Edit Users" Foreground="#333" Click="Edit_User"/>
+                <MenuItem Header="Delete Users" Foreground="#333" Click="Delete_User"/>
+            </MenuItem>
+
+            <!-- Manage Buses -->
+            <MenuItem Header="Manage Vehicles" BorderThickness="0,0,2,0" BorderBrush="white" FontWeight="Bold" Width="120" Height="40">
+                <!-- Submenu Items -->
+                <MenuItem Header="View Vehicle" Foreground="#333" Click="View_Vehicles"/>
+                <MenuItem Header="Add Vehicle" Foreground="#333" Click="Add_Vehicle"/>
+                <MenuItem Header="Edit Vehicle" Foreground="#333" Click="Edit_Vehicle"/>
+                <MenuItem Header="Delete Vehicle" Foreground="#333" Click="Delete_Vehicle"/>
+            </MenuItem>
+            <MenuItem Header="Logout" FontWeight="Bold" BorderThickness="0,0,2,0" BorderBrush="white" Width="100"  HorizontalAlignment="Left" Height="40" Click="Logout_Window"/>
+        </Menu>
+
+        <!-- Welcome Message -->
+
+
+        <!-- Main Content Area -->
+        <Grid Grid.Row="1">
+            <StackPanel x:Name="delstack" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed">
+                <Label x:Name="DelStackLable" HorizontalAlignment="Center" FontSize="16" Margin="0,0,0,10" FontWeight="Bold">Enter Email Of The Person You Want To Delete</Label>
+                <!-- Input Field -->
+                <TextBox x:Name="delTextBox" FontSize="16" Width="200" Height="30" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                <!-- Button -->
+                <Button Height="20" Width="80" Content="Delete" x:Name="DelStackButton" Click="Check_User_For_Del"/>
+            </StackPanel>
+            <StackPanel x:Name="editstack" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible">
+                <Label x:Name="EditStackLable" HorizontalAlignment="Center" FontSize="16" Margin="0,0,0,10" FontWeight="Bold">Enter Email Of The Person You Want To Edit</Label>
+                <!-- Input Field -->
+                <TextBox x:Name="editTextBox" FontSize="16" Width="200" Height="30" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                <!-- Button -->
+                <Button Height="20" Width="80" Content="Edit" x:Name="EditStackButton" Click="Check_User_For_Edit"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

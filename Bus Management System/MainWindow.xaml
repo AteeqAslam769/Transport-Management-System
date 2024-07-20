@@ -1,0 +1,39 @@
+﻿<Window x:Class="Transport_Management_System.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" Height="458" Width="454">
+    <Window.Icon>
+        <BitmapImage UriSource="C:\Users\Ateeq\Desktop\EAD\Final Project\Bus_logo.ico"/>
+    </Window.Icon>
+    <Grid Margin="10,0,0,0" Height="481" VerticalAlignment="Top">
+        <StackPanel Margin="0,22,-9,0" Height="469" VerticalAlignment="Top">
+            <!-- Bold Title -->
+            <TextBlock Text="Bus Management System" FontWeight="ExtraBold" FontSize="30" Margin="0,0,0,20"  HorizontalAlignment="Center" Height="80"/>
+
+            <!-- Email Field -->
+            <StackPanel Margin="0,0,0,20">
+                <TextBox x:Name="EmailTextBox" Width="250" Height="30" Margin="30,0,0,0" FontSize="15"/>
+                <Label x:Name="EmailLabel" Content="Email" FontWeight="ExtraBold" FontSize="18" HorizontalAlignment="Left" Margin="5,-30"/>
+            </StackPanel>
+
+            <!-- Password Field -->
+            <StackPanel Margin="0,0,0,20">
+                <PasswordBox x:Name="PasswordBox" Width="250" Height="30" Margin="30,0,0,0" FontSize="15"/>
+                <Label x:Name="PasswordLabel" Content="Password" FontSize="18" HorizontalAlignment="Left" Margin="5,-30" FontWeight="ExtraBold" Height="59"/>
+            </StackPanel>
+
+            <!-- Credential Dropdown -->
+            <StackPanel Margin="0,0,0,10">
+                <ComboBox x:Name="CredentialComboBox" Width="250" Height="30" FontWeight="Bold" Margin="30,0,0,0" FontSize="15">
+                    <!-- Add ComboBoxItems for credential options -->
+                    <ComboBoxItem Content="Super Admin" FontWeight="Bold"/>
+                    <ComboBoxItem Content="Admin" FontWeight="Bold"/>
+                    <ComboBoxItem Content="Security Guard" FontWeight="Bold"/>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Login Button -->
+            <Button Content="Login" Width="100" Height="30" Margin="0,40" FontWeight="ExtraBold" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿Transport Management Syatem
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\Ateeq\source\repos\Bus Management System\Bus Management System\obj\Debug\net8.0-windows\
+Transport_Management_System
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+C:\Users\Ateeq\source\repos\Bus Management System\Bus Management System\App.xaml
+211050273370
+
+30-824049891
+241-332125466
+Admin_Dashboard\Add_Vehicle.xaml;Admin_Dashboard\Admin_Dashboard_Basic_Page.xaml;Admin_Dashboard\Admin_Dashboard_Window.xaml;Admin_Dashboard\Report_Generation_Page.xaml;Admin_Dashboard\Show_Security_Guard_Page.xaml;Admin_Dashboard\Show_Vehicle_Page.xaml;MainWindow.xaml;Security_Guard_Dashboard\Registered_Vehicle_Entry.xaml;Security_Guard_Dashboard\Security_Guard_Dashboard_Basic_Page.xaml;Security_Guard_Dashboard\Security_Guard_Dashboard_Window.xaml;Security_Guard_Dashboard\UnRegistered_Vehicle_Entry.xaml;Super_Admin_Dashboard\Super_Admin_Dashboard_Basic_Page.xaml;Super_Admin_Dashboard\Super_Admin_Dashboard_Pages\User\Add_User.xaml;Super_Admin_Dashboard\Super_Admin_Dashboard_Pages\User\Delete_User_Page.xaml;Super_Admin_Dashboard\Super_Admin_Dashboard_Pages\User\Edit_User_Page.xaml;Super_Admin_Dashboard\Super_Admin_Dashboard_Pages\User\View_Users_Page.xaml;Super_Admin_Dashboard\Super_Admin_Dashboard_Pages\Vehicle\Add_Vehicle.xaml;Super_Admin_Dashboard\Super_Admin_Dashboard_Pages\Vehicle\Delete_Vehicle_Page.xaml;Super_Admin_Dashboard\Super_Admin_Dashboard_Pages\Vehicle\Edit_Vehicle_Page.xaml;Super_Admin_Dashboard\Super_Admin_Dashboard_Pages\Vehicle\View_Vehicles_Page.xaml;Super_Admin_Dashboard\Super_Admin_Dashboard_Window.xaml;
+
+False
+

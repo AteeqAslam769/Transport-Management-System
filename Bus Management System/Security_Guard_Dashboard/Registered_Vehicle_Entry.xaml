@@ -1,0 +1,74 @@
+﻿<Page x:Class="Transport_Management_System.Security_Guard_Dashboard.Registered_Vehicle_Entry"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Registered_Vehicle_Entry"
+      Background="#F0F0F0">
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition Height="180"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Registered Vehicles" Margin="20,0,20,0" FontSize="17" FontWeight="Bold"></Label>
+            <DataGrid Grid.Row="1" Height="100" AutoGenerateColumns="False" x:Name="VehicleGrid"  SelectedCellsChanged="VehicleDataGridFocus" Background="White" BorderBrush="#3498DB" IsReadOnly="True" Margin="20,0,20,0">
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Binding="{Binding Vehicle_Id}" Width="*" Header="Vehicle Registration Number"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Vehicle_Type}" Width="*" Header="Vehicle Type"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Status}" Width="*" Header="Current Status"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="EnteredButton" HorizontalAlignment="Right" Grid.Column="0" Height="30" Width="100" Content="Entered" FontWeight="bold" Background="#FF00AB00" Foreground="White" Margin="5" Click="Entered_Button_Click" Visibility="Collapsed"/>
+                <Button x:Name="ExitedButton" HorizontalAlignment="Left" Grid.Column="1" Height="30" Width="100" Content="Exited" FontWeight="bold" Background="#FFF52525" Foreground="White" Margin="5"  Click="Exited_Button_Click" Visibility="Collapsed"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="11*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition  Height="100"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Vehicles Entries" FontWeight="Bold" FontSize="18" Margin="20,0,20,0" Grid.ColumnSpan="2"></Label>
+            <DataGrid x:Name="VehicleMovmentGrid" Margin="20,0,20,0" Height="100" AutoGenerateColumns="False" IsReadOnly="True" LostFocus="VehicleMovementGridLoseFocus" GotFocus="VehicleMovementGridcellChanged" Grid.Row="1" Grid.ColumnSpan="2">
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Binding="{Binding MovementId}" Width="120" Header="Vehicle Movment Id"></DataGridTextColumn>
+                    <DataGridTextColumn  Binding="{Binding VehicleRegistrationNumber}" Width="170" Header="Vehicle Registration Number"></DataGridTextColumn>
+                    <DataGridTextColumn  Binding="{Binding VehicleType}" Width="80" Header="Vehicle Type"></DataGridTextColumn>
+                    <DataGridTextColumn  Binding="{Binding MovementStatus}" Width="110" Header="Movement Status"></DataGridTextColumn>
+                    <DataGridTextColumn  Binding="{Binding VehicleStatus}" Width="90" Header="Vehicle Status"></DataGridTextColumn>
+                    <DataGridTextColumn  Binding="{Binding Date}" Width="*" Header="Date"></DataGridTextColumn>
+                    <DataGridTextColumn  Binding="{Binding Time}" Width="*" Header="Time"></DataGridTextColumn>
+                    <DataGridTextColumn  Binding="{Binding Day}" Width="*" Header="Day"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="VehicleMovementGridButton" Height="30" Width="100" Grid.Row="2" Background="#FFF52525" Foreground="white" FontWeight="Bold"  Click="Delete_Entry_Clicked" Visibility="Collapsed" Grid.ColumnSpan="2" >Delete Entry</Button>
+
+        </Grid>
+
+    </Grid>
+</Page>

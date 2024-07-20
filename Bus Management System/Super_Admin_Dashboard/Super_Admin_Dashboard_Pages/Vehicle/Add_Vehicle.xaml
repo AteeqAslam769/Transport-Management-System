@@ -1,0 +1,49 @@
+﻿<Window x:Class="Transport_Management_System.Super_Admin_Dashboard.Super_Admin_Dashboard_Pages.Add_Vehicle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Vehicle" Height="458" Width="454"
+        Background="#f2f2f2"
+        ResizeMode="NoResize">
+    <Window.Icon>
+        <BitmapImage UriSource="C:\Users\Ateeq\Desktop\EAD\Final Project\Bus_logo.ico"/>
+    </Window.Icon>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Add Vehicle" FontWeight="ExtraBold" FontSize="30" Margin="0,0,0,30" HorizontalAlignment="Center" Height="80"/>
+
+            
+                <Grid Grid.Row="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Content="Vehicle Id" FontWeight="Bold" FontSize="16" VerticalAlignment="Center" />
+                    <TextBox x:Name="IdTextBox" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="0" Width="250" Height="30" FontSize="15" Background="#FFFFFF" BorderBrush="#007ACC" BorderThickness="1"/>
+                
+                
+                    <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Content="Vehicle Type" FontWeight="Bold" FontSize="16" VerticalAlignment="Center" />
+            <ComboBox x:Name="VehicleTypeComboBox" Grid.Column="1" Grid.Row="1" Width="250" Height="30" FontWeight="Bold" Margin="0,0,0,0" FontSize="15" Background="#FFFFFF" BorderBrush="#007ACC" BorderThickness="1" HorizontalAlignment="Left">
+                <ComboBoxItem Content="Car" FontWeight="Bold"/>
+                <ComboBoxItem Content="Truck" FontWeight="Bold"/>
+                <ComboBoxItem Content="Motorcycle" FontWeight="Bold"/>
+                <ComboBoxItem Content="Bicycle" FontWeight="Bold"/>
+                <ComboBoxItem Content="Van" FontWeight="Bold"/>
+                <ComboBoxItem Content="Bus" FontWeight="Bold"/>
+                <!-- Add more vehicle types here -->
+            </ComboBox>
+
+        </Grid>
+            
+
+            <Button Grid.Row="2" Content="Add Vehicle" Width="120" Height="40" Margin="10,0" FontWeight="ExtraBold" Click="Add_Vehicle_Button" Background="#007ACC" Foreground="White" BorderThickness="0"/>
+        
+    </Grid>
+</Window>
